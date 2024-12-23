@@ -20,8 +20,14 @@ def max_2_sum(arr)
 end
 
 def sum_to_n?(arr, n)
-  arr.each_with_index do |elem1, i|
-    arr.each_with_index do |elem2, j|
+  arr.each_with_index do |elem1, i|  # Iterate over each element in the array with its index
+    arr.each_with_index do |elem2, j|  # Nested iteration over the array with index
+      next if i == j  # Skip if both indices are the same (to avoid using the same element twice)
+      return true if elem1 + elem2 == n  # Return true if the sum of two elements equals n
+    end
+  end
+  false  # If no pair is found that sums to n, return false
+  
 end
 
 # Part 2
