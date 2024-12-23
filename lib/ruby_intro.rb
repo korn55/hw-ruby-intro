@@ -37,7 +37,8 @@ def hello(name)
 end
 
 def starts_with_consonant? s
- 
+ /^[^aeiou\W]/i.match?(s)  # Checks if the string `s` starts with a consonant (non-vowel character) and is not a non-word character (e.g., symbols or spaces)
+
 end
 
 def binary_multiple_of_4? s
