@@ -42,7 +42,8 @@ def starts_with_consonant? s
 end
 
 def binary_multiple_of_4? s
-  
+  /^[01]*00$/.match?(s) || s == '0' # Checks if the string `s` satisfies one of the following conditions:
+
 end
 
 def hello(name)
