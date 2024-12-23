@@ -4,11 +4,19 @@
 
 # Define a method to sum all elements in an array
 def sum(arr)
-  arr.sum
+  arr.su
 end
 
 def max_2_sum(arr)
- 
+  if arr.empty?  # Check if the array is empty
+    return 0     # If the array is empty, return 0 as there are no elements to sum
+  elsif arr.length == 1  # Check if the array contains only one element
+    return arr[0]        # If there's only one element, return that element as the result
+  else
+    ghost_arr = arr.sort.reverse  # Sort the array in descending order
+    return ghost_arr[0] + ghost_arr[1]  # Add the two largest elements and return their sum
+  end
+  
 end
 
 def sum_to_n?(arr, n)
