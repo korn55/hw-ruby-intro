@@ -32,7 +32,8 @@ end
 
 # Part 2
 def hello(name)
-  
+  "Hello, #{name}"  # Create a string that includes the value of the variable `name` using string interpolation
+
 end
 
 def starts_with_consonant? s
