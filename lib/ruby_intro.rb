@@ -46,20 +46,33 @@ def binary_multiple_of_4? s
 
 end
 
-def hello(name)
- 
-end
 
-def starts_with_consonant?(s)
-  
-end
-
-def binary_multiple_of_4?(s)
-  
-end
 
 # Part 3
 
 class BookInStock
-  
+  attr_accessor :isbn, :price
+# Creates getter and setter methods for the `isbn` and `price` attributes.
+
+def initialize(isbn, price)
+  # Constructor method to initialize `isbn` and `price` attributes.
+
+  raise ArgumentError, 'ISBN cannot be empty' if isbn.empty?
+  # Ensures `isbn` is not empty, raises an error if it is.
+
+  raise ArgumentError, 'Price must be greater than 0' if price <= 0
+  # Ensures `price` is a positive value, raises an error otherwise.
+
+  @isbn = isbn
+  # Sets the instance variable `@isbn` with the provided value.
+
+  @price = price
+  # Sets the instance variable `@price` with the provided value.
+end
+
+def price_as_string
+  format('$%.2f', @price)
+  # Returns the `price` formatted as a string in currency format, with two decimal places.
+end
+
 end
