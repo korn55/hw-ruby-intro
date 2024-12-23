@@ -20,7 +20,8 @@ def max_2_sum(arr)
 end
 
 def sum_to_n?(arr, n)
-  
+  arr.each_with_index do |elem1, i|
+    arr.each_with_index do |elem2, j|
 end
 
 # Part 2
